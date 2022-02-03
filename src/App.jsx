@@ -13,7 +13,7 @@ function App() {
   const [filter, setFilter] = useState('');
 
   function isContactExist(name) {
-    return !!contacts.find(contact =>
+    return !contacts.find(contact =>
       contact.name.toUpperCase().includes(name.toUpperCase()),
     );
   }
